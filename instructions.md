@@ -20,134 +20,135 @@ $ cd instruments-api-mock-exam
 $ yarn
 ```
 
+3) Start the API
+
+- Run `npm start` in your terminal to start the api.  The api will start on port 4000 by default.  
+
+  Two test endpoints have been provided:
+
+  - `GET /` - http://localhost:4000/
+  - `GET /test` - http://localhost:4000/test
+
 ## Steps
 
-Successfully complete the first 4 steps to receive a grade of 'Meets Expectations'.  Additionally, successfully complete steps Y and Z to receive a grade of 'Exceeds Expectations'. Complete additional steps to receive a grade of 'Outstanding'.
+Successfully complete the first 4 steps to receive a grade of 'Meets Expectations'.  Additionally, successfully complete step 5 to receive a grade of 'Exceeds Expectations'.  
 
 ### Step 1
 
-- Add a file named **load-data.js**.  Create a program that adds the following instruments into a CouchDB database named `{your first name}Instruments`.  Ex:  `TripInstruments`:
+- Using the file named **load-data.js**, create a program that adds the following instruments into a CouchDB database named `{your first name}Instruments`.  Ex:  `TripInstruments`:
 
 > When interacting with CouchDB in Cloudant, remember to keep your API key and password (secret) safe.
 
-```
-[
-{
-  "_id": "instrument_cello_cello_platinum",
-  "name": "Cello Platinum",
-  "type": "instrument",
-  "category": "cello",
-  "group": "strings",
-  "retailPrice": 600,
-  "manufacturer": "Strings, Inc."
-},
-{
-  "_id": "instrument_cello_cello_silver",
-  "name": "Cello Silver",
-  "type": "instrument",
-  "category": "cello",
-  "group": "strings",
-  "retailPrice": 350,
-  "manufacturer": "Strings, Inc."
-},
-{
-  "_id": "instrument_oboe_oboe_beethoven",
-  "name": "Oboe Beethoven",
-  "type": "instrument",
-  "category": "Oboe",
-  "group": "winds",
-  "retailPrice": 599,
-  "manufacturer": "Symphonic, Inc."
-},
-{
-  "_id": "instrument_piccolo_piccolo_bach",
-  "name": "Piccolo Bach",
-  "type": "instrument",
-  "category": "piccolo",
-  "group": "winds",
-  "retailPrice": 300,
-  "manufacturer": "Symphonic, Inc."
-},
-{
-  "_id": "instrument_piccolo_piccolo_beethoven",
-  "name": "Piccolo Beethoven",
-  "type": "instrument",
-  "category": "piccolo",
-  "group": "winds",
-  "retailPrice": 500,
-  "manufacturer": "Symphonic, Inc."
-},
-{
-  "_id": "instrument_saxophone_jazzy_100",
-  "name": "Jazzy 100",
-  "type": "instrument",
-  "category": "saxophone",
-  "group": "winds",
-  "retailPrice": 300,
-  "manufacturer": "Musical Winds, Inc."
-},
-{
-  "_id": "instrument_saxophone_jazzy_200",
-  "name": "Jazzy 200",
-  "type": "instrument",
-  "category": "saxophone",
-  "group": "winds",
-  "retailPrice": 400,
-  "manufacturer": "Musical Winds, Inc."
-},
-{
-  "_id": "instrument_tuba_tubanator",
-  "name": "Tubanator",
-  "type": "instrument",
-  "category": "tuba",
-  "group": "brass",
-  "retailPrice": 400,
-  "manufacturer": "Brasstastic, Inc."
-},
-{
-  "_id": "instrument_viola_standard_100",
-  "name": "Standard 100",
-  "type": "instrument",
-  "category": "viola",
-  "group": "strings",
-  "retailPrice": 299,
-  "manufacturer": "String Music, Inc."
-},
-{
-  "_id": "instrument_violin_delux_200",
-  "name": "Delux 200",
-  "type": "instrument",
-  "category": "violin",
-  "group": "strings",
-  "retailPrice": 599,
-  "manufacturer": "Violins, Inc."
-},
-{
-  "_id": "instrument_violin_delux_300",
-  "name": "Delux 300",
-  "type": "instrument",
-  "category": "violin",
-  "group": "strings",
-  "retailPrice": 599,
-  "manufacturer": "Violins, Inc."
-}
-]
-```
+  ```
+  [
+    {
+      "_id": "instrument_cello_cello_platinum",
+      "name": "Cello Platinum",
+      "type": "instrument",
+      "category": "cello",
+      "group": "strings",
+      "retailPrice": 600,
+      "manufacturer": "Strings, Inc."
+    },
+    {
+      "_id": "instrument_cello_cello_silver",
+      "name": "Cello Silver",
+      "type": "instrument",
+      "category": "cello",
+      "group": "strings",
+      "retailPrice": 350,
+      "manufacturer": "Strings, Inc."
+    },
+    {
+      "_id": "instrument_oboe_oboe_beethoven",
+      "name": "Oboe Beethoven",
+      "type": "instrument",
+      "category": "Oboe",
+      "group": "winds",
+      "retailPrice": 599,
+      "manufacturer": "Symphonic, Inc."
+    },
+    {
+      "_id": "instrument_piccolo_piccolo_bach",
+      "name": "Piccolo Bach",
+      "type": "instrument",
+      "category": "piccolo",
+      "group": "winds",
+      "retailPrice": 300,
+      "manufacturer": "Symphonic, Inc."
+    },
+    {
+      "_id": "instrument_piccolo_piccolo_beethoven",
+      "name": "Piccolo Beethoven",
+      "type": "instrument",
+      "category": "piccolo",
+      "group": "winds",
+      "retailPrice": 500,
+      "manufacturer": "Symphonic, Inc."
+    },
+    {
+      "_id": "instrument_saxophone_jazzy_100",
+      "name": "Jazzy 100",
+      "type": "instrument",
+      "category": "saxophone",
+      "group": "winds",
+      "retailPrice": 300,
+      "manufacturer": "Musical Winds, Inc."
+    },
+    {
+      "_id": "instrument_saxophone_jazzy_200",
+      "name": "Jazzy 200",
+      "type": "instrument",
+      "category": "saxophone",
+      "group": "winds",
+      "retailPrice": 400,
+      "manufacturer": "Musical Winds, Inc."
+    },
+    {
+      "_id": "instrument_tuba_tubanator",
+      "name": "Tubanator",
+      "type": "instrument",
+      "category": "tuba",
+      "group": "brass",
+      "retailPrice": 400,
+      "manufacturer": "Brasstastic, Inc."
+    },
+    {
+      "_id": "instrument_viola_standard_100",
+      "name": "Standard 100",
+      "type": "instrument",
+      "category": "viola",
+      "group": "strings",
+      "retailPrice": 299,
+      "manufacturer": "String Music, Inc."
+    },
+    {
+      "_id": "instrument_violin_delux_200",
+      "name": "Delux 200",
+      "type": "instrument",
+      "category": "violin",
+      "group": "strings",
+      "retailPrice": 599,
+      "manufacturer": "Violins, Inc."
+    },
+    {
+      "_id": "instrument_violin_delux_300",
+      "name": "Delux 300",
+      "type": "instrument",
+      "category": "violin",
+      "group": "strings",
+      "retailPrice": 599,
+      "manufacturer": "Violins, Inc."
+    }
+  ]
+  ```
 
 - Within your **package.json**, create a `load` script that runs your **load-data.js** program.
 
 ### Step 2
 
-- Create the following Mango query indexes.  Create one index per field. Put the indexes within a file named **load-index.js**.  See https://pouchdb.com/guides/mango-queries.html.  
-
-  - `type`
-  - `name`
-  - `category`
-  - `group`
-  - `retailPrice`
-  - `manufacturer`
-
-- Within your **package.json**, create a `loadIndex` script that runs your **load-index.js** program and creates the indexes.
+- Create a file named named **load-index.js** to create Mango query indexes, if necessary.
+- Within your **package.json**, create a `loadIndex` script that runs your **load-index.js** program.
 
 ### Step 3
 
@@ -218,7 +219,7 @@ Review the information below and create the described functionality.
 
   `PUT /instruments/:id`
 
-  Updates a specific instrument as identified by the `:id` path parameter.  The request body must contain a JSON object that represents the instrument being updated.  The request body must include the `_id`, `_rev`, `type`, `name`, `category`, `group`, `retailPrice`, and `manufacturer` fields.  Not providing the most recent `_rev` value will cause an HTTP 409 - conflict error to occur.
+  Updates a specific instrument as identified by the `:id` path parameter.  The request body must contain a JSON object that represents the instrument being updated.  The request body must include the `_id`, `_rev`, `type`, `name`, `category`, `group`, `retailPrice`, and `manufacturer` fields.  Not providing the most recent `_rev` value will cause an `409 - conflict` error to occur.
 
   **Sample Request**
 
@@ -273,7 +274,7 @@ Review the information below and create the described functionality.
   }
   ```
 
-- List Instruments
+- List Instruments with pagination
 
   `GET /instruments`
 
@@ -363,7 +364,7 @@ Create developer on-boarding instructions by creating a **README.md** file.  Inc
 
 #### Getting Started
 
-- Provide instruction on how to
+Within the Getting Started section provide guidance on how to:
 
   - Clone your repo
   - Install dependencies
@@ -371,3 +372,32 @@ Create developer on-boarding instructions by creating a **README.md** file.  Inc
   - Load data
   - Load indexes
   - Start the API
+
+
+### Step 5 - Add a filter
+
+- Create a `filter` query parameter on the `GET /instruments` endpoint to provide to flexible search capability.  
+- Provide the ability to filter instruments by name, category, group, retail price and manufacturer.  
+- The `filter` query parameter may be used in conjunction with `limit` but not with `lastItem`.
+
+  > Instruments may not be filtered and paginated at the same time.  
+
+  **Examples**
+
+  - Filter By instrument name and limit to five instruments
+
+    ```
+    GET /instruments?filter=name:Cello Platinum&limit=5
+    ```
+
+  - Filter By price and limit to 10 instruments
+
+    ```
+    GET /instruments?filter=retailPrice:300&limit=10
+    ```
+
+  - Filter By group
+
+    ```
+    GET /instruments?filter=group:winds
+    ```
