@@ -4,29 +4,29 @@ Create a RESTful api that helps to manage a list of musical instruments.  Includ
 
 ## Getting Started
 
-1) Fork the repo
+1. Fork the repo
 
-- Sign in to your GitHub account and fork the following repo:
+  Sign in to your GitHub account and fork the following repo:
 
-```
-https://github.com/jrs-innovation-center/instruments-api-mock-exam
-```
+  ```
+  https://github.com/jrs-innovation-center/instruments-api-mock-exam
+  ```
 
-2) Clone your fork
+2. Clone your fork
 
-- Clone your fork to your local machine and install the project's dependencies.
+  Clone your fork to your local machine and install the project's dependencies.
 
-```
-$ git clone <url>
-$ cd instruments-api-mock-exam
-$ yarn
-```
+  ```
+  $ git clone <url>
+  $ cd instruments-api-mock-exam
+  $ yarn
+  ```
 
-3) Start the API
+3. Start the API
 
-- Run `npm start` in your terminal to start the api.  The api will start on port 4000 by default.  
+  Run `npm start` in your terminal to start the api.  The api will start on port 4000 by default.  
 
-  Two test endpoints have been provided:
+  Two endpoints have been provided:
 
   - `GET /` - http://localhost:4000/
   - `GET /test` - http://localhost:4000/test
