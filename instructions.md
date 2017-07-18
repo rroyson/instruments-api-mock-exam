@@ -2,6 +2,8 @@
 
 Create a RESTful api that helps to manage a list of musical instruments.  Include scripts to load data and indexes.  Provide developer documentation to minimize on-boarding friction.  
 
+## Getting Started
+
 1) Fork the repo
 
 - Sign in to your GitHub account and fork the following repo:
@@ -31,7 +33,7 @@ $ yarn
 
 ## Steps
 
-Successfully complete the first 4 steps to receive a grade of 'Meets Expectations'.  Additionally, successfully complete step 5 to receive a grade of 'Exceeds Expectations'.  
+Successfully complete the first 4 steps to receive a grade of 'Meets Expectations'. Complete step 5 to receive a grade of 'Exceeds Expectations'.  
 
 ### Step 1
 
