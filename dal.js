@@ -15,11 +15,9 @@ const test = callback => {
 
 //CREATE
 const createInstrument = function(instrument, callback) {
-  //instrument_cello_cello_platinum
   const guitarName = pathOr('', ['name'], instrument)
   const guitarCategory = pathOr('', ['category'], instrument)
   const pk = instrumentPk(`${guitarCategory} ${guitarName}`)
-  console.log('pk: ', pk)
 
   instrument = assoc('_id', pk, instrument)
   instrument = assoc('type', 'instrument', instrument)
@@ -63,15 +61,11 @@ function listInstruments(filter, lastItem, limit, callback) {
     const filterValue = last(arrFilter)
 
     const selectorValue = assoc(filterField, filterValue, {})
-    console.log('selectorValue', selectorValue)
-    // selectorValue = {storeNumber: 1004}
     query = {
       selector: selectorValue,
       limit
     }
   } else if (lastItem) {
-    console.log('hit if/else')
-    // we need to grab the next page of documents
     query = {
       selector: {
         _id: { $gt: lastItem },
@@ -80,7 +74,6 @@ function listInstruments(filter, lastItem, limit, callback) {
       limit
     }
   } else {
-    console.log('hit else statement')
     query = {
       selector: {
         _id: { $gte: null },
@@ -91,9 +84,6 @@ function listInstruments(filter, lastItem, limit, callback) {
   }
 
   find(query, function(err, data) {
-    console.log('query:', query)
-    console.log('err', err)
-    console.log('data', data.docs)
     if (err) return callback(err)
     callback(null, data.docs)
   })
@@ -117,13 +107,10 @@ function deleteInstrument(instId, callback) {
 //Helper functions
 
 function createDoc(doc, callback) {
-  console.log('createDoc', doc)
   db.put(doc).then(res => callback(null, res)).catch(err => callback(err))
 }
 
 function find(query, callback) {
-  console.log('hit find function')
-  console.log('query', JSON.stringify(query, null, 2))
   query ? db.find(query, callback) : callback(null, [])
 }
 

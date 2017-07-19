@@ -47,8 +47,6 @@ app.post('/instruments', function(req, res, next) {
   const checkResults = checkInstrumentFields(instrument)
 
   if (checkResults.length > 0) {
-    console.log('checkResults', checkResults)
-
     return next(
       new HTTPError(400, 'Missing required fields in the request body.', {
         fields: checkResults
@@ -63,7 +61,6 @@ app.post('/instruments', function(req, res, next) {
 })
 // READ   -  GET /instruments/:id
 app.get('/instruments/:id', function(req, res, next) {
-  console.log('req:', req)
   const instrumentId = pathOr(null, ['params', 'id'], req)
 
   if (instrumentId) {

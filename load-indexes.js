@@ -9,3 +9,5 @@ db
   })
   .then(() => console.log('Created index on the type field'))
   .catch(err => console.log(err))
+
+//index for each filter item
